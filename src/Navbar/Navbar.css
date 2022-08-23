@@ -1,0 +1,59 @@
+:root {
+    --main-color: #F1CBFF;
+    --main-secondary-color: #FFD2AA;
+    --main-heading-font:'Poppins', sans-serif;
+    --main-regular-font:'Inter', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+#navbar{
+    background: #E8F9FE;
+}
+.contact{
+    font-size: 1.6rem;
+    font-weight: bolder;
+    padding: 0 2rem 0 0 ;
+}
+.logo{
+    width: 15.2rem;
+}
+ul li{
+    padding: 0 1.2rem;
+}
+.icons{
+    font-size: 2rem !important;
+}
+
+/* media query */
+@media only screen and (max-width:998px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 45%;
+    }
+}    

@@ -1,0 +1,56 @@
+:root {
+    --main-color: #F1CBFF;
+    --main-secondary-color: #FFD2AA;
+    --main-heading-font: 'Poppins', sans-serif;
+    --main-regular-font: 'Inter', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+.category {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.category button{
+    margin: 0 1rem;
+    width: 154.3px;
+    height: 49px;
+    background: var( --main-color);
+    border-radius: .7rem;
+    color: black;
+    font-family: var(--main-regular-font);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+}
+.medicine_card h5{
+font-size: 1.5rem;
+font-weight: 700;
+}
+.medicine_card p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(21, 21, 21);
+}
+
+
+
+
+@media only screen and (max-width:998px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 45%;
+    }
+}   
