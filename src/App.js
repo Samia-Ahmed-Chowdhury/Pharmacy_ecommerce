@@ -15,7 +15,10 @@ function App() {
           <Route exact path="/home" element={<Home />}></Route>
         </Routes>
         <Routes>
-          <Route exact path="/Precibecision" element={<h4> ggg</h4>}></Route>
+          <Route exact path="/Precibecision" element={<h1> Precibecision page</h1>}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path="/Cta" element={<h1> Cta page</h1>}></Route>
         </Routes>
       </BrowserRouter> 
     </>

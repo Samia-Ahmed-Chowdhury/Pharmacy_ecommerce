@@ -8,6 +8,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+  
 }
 html {
     scroll-behavior: smooth;
@@ -60,12 +61,112 @@ html {
 @media only screen and (max-width:1200px) {
     #hero h1 {
         font-size: 4rem;
+        line-height: 5rem;
     }
     #hero p{
         font-size: 1.4rem; 
         margin: 0 0 1.3rem 0;
     }
 }
+
+
+ 
+
+/* / cta */
+
+#cta .hide_svg{
+    display: none;
+}
+
+#cta h1 {
+    font-family: var(--main-heading-font);
+    font-size: 5.5rem;
+    font-weight: 600;
+    color: black;
+    line-height: 7.8rem;
+}
+
+#cta p {
+    margin: 3rem 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.9rem;
+    color: #776C6C;
+}
+
+#cta button {
+    padding: 1.5rem 5.5rem !important;
+    background: #F1CBFF;
+    border-radius: .7rem;
+    color: black;
+    font-family: var(--main-regular-font);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+/* media query */
+@media only screen and (max-width:1400px) {
+    #cta h1 {
+        font-size: 5rem;
+    }
+}
+@media only screen and (max-width:1200px) {
+    #cta h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    #cta p{
+        font-size: 1.4rem; 
+        margin: 0 0 1.3rem 0;
+    }
+}
+
+/* service */
+
+#service h3{
+    font-size: 37px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#service .card {
+    box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 20%) !important;
+    border-radius: 15px 15px 15px 70px !important;
+    padding: 27px !important;
+    border: none;
+}
+#service .bottom_card{
+    border: none;
+margin-top:4.8rem !important;
+box-shadow: 5px 14px 50px rgb(0 0 0 / 10%) !important;
+}
+#service .card_img{
+    display: flex;
+    justify-content: center;
+}
+#service .card-title {
+    padding-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #776C6C;
+    background: none;
+    text-align: center;
+}
+
+#service .card-text {
+    padding-bottom: 8px;
+    font-size: 16px;
+    margin-top: 12px;
+
+}
+
+
+
 
 
 @media only screen and (max-width:998px) {
@@ -78,4 +179,4 @@ html {
     html {
         font-size: 45%;
     }
-}    
+}   

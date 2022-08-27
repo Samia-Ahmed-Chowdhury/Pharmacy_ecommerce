@@ -2,8 +2,7 @@ import React from 'react'
 function CatCard(props) {
   return (
     <>
-      
-        <div className="col-xl-4 col-lg-4 col-md-6 col-sm-10 col-10 g-4 mx-auto">
+        <div className="col-xl-4 col-lg-4 col-md-6 col-sm-10 col-10 g-5 ">
           <div className="medicine_card card mb-3" >
             <div className="row g-0">
               <div className="col-md-4">
@@ -20,8 +19,6 @@ function CatCard(props) {
             </div>
           </div>
         </div>
-    
-
     </>
   )
 }

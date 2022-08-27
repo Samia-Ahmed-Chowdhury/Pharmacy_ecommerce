@@ -4,7 +4,7 @@ import CatCard from './CatCard'
 
 import Sdata from '../Api_Data'
 
-const allCatMenu = ["All", ... new Set(Sdata.map((curElem) => {
+const allCatMenu = ["All", ...new Set(Sdata.map((curElem) => {
   return curElem.category;
 }))]
 console.log(allCatMenu)
@@ -14,11 +14,11 @@ function CatMenu() {
   const [catItems, setCatItems] = useState(allCatMenu)
 
   const filterMenu = (categoryItem) => {
-    if (categoryItem == "All") {
-      setItems(Sdata)
+    if (categoryItem === "All") {
+      return setItems(Sdata);
     }
     const updateItems = Sdata.filter((curEle) => {
-      return curEle.category == categoryItem;
+      return curEle.category === categoryItem;
 
     });
     setItems(updateItems);
@@ -44,20 +44,25 @@ function CatMenu() {
         <button onClick={() => filterMenu('Injections')}>Injections  </button>
         <button onClick={() => filterMenu('Suppositories')}>Suppositories  </button> */}
       </section>
-      <div className="container my-5">
+      <div className="container-fulid my-5">
         <div className="row">
-          {items.map((val, index) => {
-            return (
-              <CatCard
-                key={index}
-                img={val.img}
-                title={val.title}
-                details={val.details}
-                price={val.price}
-                category={val.category}
-              />
-            );
-          })}
+          <div className="col-10 mx-auto">
+            <div className="row">
+
+              {items.map((val, index) => {
+                return (
+                  <CatCard
+                    key={index}
+                    img={val.img}
+                    title={val.title}
+                    details={val.details}
+                    price={val.price}
+                    category={val.category}
+                  />
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </>

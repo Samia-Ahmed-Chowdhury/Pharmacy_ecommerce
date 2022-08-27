@@ -1,0 +1,68 @@
+
+footer .footer_box{
+    margin-top: 90px;
+    background: #FFFBF7;
+border-radius: 120px 120px  0px 0px;
+}
+footer p {
+    margin: 24px 0;
+    column-gap: 0;
+    color: #41464bbd;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+footer .social {
+    padding-right: 6rem !important;
+}
+
+footer h6 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+footer form input {
+    width: 100%;
+    max-width: 257px;
+    height: 47px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 28px;
+    color: #5a626d;
+    font-weight: 400;
+    font-family: "Inter";
+    padding-left: 25px;
+}
+
+footer form .submit_btn {
+    width: 60px;
+    height: 47px;
+    border-radius: 0 4px 4px 0;
+    display: inline-block;
+    position: absolute;
+    background:#FFD2AA;
+    border: 0;
+    color: transparent;
+}
+
+.col_2 {
+    padding: 0 65px !important;
+}
+
+@media only screen and (max-width:1400px) {
+
+    .col_2 {
+        padding: 0 43px !important;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    footer .social {
+        padding-right: 7rem !important;
+    }
+}
