@@ -7,12 +7,12 @@ import Sdata from '../Api_Data'
 const allCatMenu = ["All", ...new Set(Sdata.map((curElem) => {
   return curElem.category;
 }))]
-console.log(allCatMenu)
+// console.log(allCatMenu)
 
 function CatMenu() {
   const [items, setItems] = useState(Sdata);
-  const [catItems, setCatItems] = useState(allCatMenu)
-
+  // const [catItems, setCatItems] = useState(allCatMenu)
+const catItems =allCatMenu;
   const filterMenu = (categoryItem) => {
     if (categoryItem === "All") {
       return setItems(Sdata);
@@ -24,11 +24,10 @@ function CatMenu() {
     setItems(updateItems);
   }
 
-
-
   return (
     <>
       <section className='category'>
+      <div className='container'>
         {
           catItems.map((curElem) => {
             return <button onClick={() => filterMenu(curElem)}>{curElem}</button>
@@ -43,6 +42,7 @@ function CatMenu() {
         <button onClick={() => filterMenu('Inhalers')}>Inhalers </button>
         <button onClick={() => filterMenu('Injections')}>Injections  </button>
         <button onClick={() => filterMenu('Suppositories')}>Suppositories  </button> */}
+        </div>
       </section>
       <div className="container-fulid my-5">
         <div className="row">
@@ -53,6 +53,7 @@ function CatMenu() {
                 return (
                   <CatCard
                     key={index}
+                    id={val.id}
                     img={val.img}
                     title={val.title}
                     details={val.details}

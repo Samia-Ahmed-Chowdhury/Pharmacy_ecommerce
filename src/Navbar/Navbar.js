@@ -6,6 +6,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PhoneIcon from '@mui/icons-material/Phone';
+
+
 function Navbar() {
     return (
         <>
@@ -22,7 +24,7 @@ function Navbar() {
                     <div className="container">
                         <div className="logo">
                             <NavLink to="/" >
-                                <img src={logo} className="img-fluid" /></NavLink>
+                                <img src={logo} alt="logo" className="img-fluid" /></NavLink>
                         </div>
                         <div>
                             <ul className="navbar-nav ms-auto mb-lg-0 d-flex flex-row">
@@ -30,7 +32,8 @@ function Navbar() {
                                     <SearchIcon className="icons" />
                                 </li>
                                 <li className="nav-item">
-                                    <ShoppingCartIcon className="icons" />
+                                    <ShoppingCartIcon className="icons cart" />
+                                    <span class="cart_count">0</span>
                                 </li>
                                 <li className="nav-item">
                                     <AccountCircleIcon className="icons" />
