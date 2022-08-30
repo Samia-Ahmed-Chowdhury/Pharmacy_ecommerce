@@ -1,5 +1,5 @@
-import React, {  useReducer } from 'react'
-import { useLocation,useNavigate } from 'react-router-dom';
+import React, { useReducer } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 import "./ProductDetails.css"
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import AddIcon from '@mui/icons-material/Add';
@@ -25,21 +25,24 @@ function ProductDetails() {
     //  console.log(ProductItem);
 
     const { id, img, category, title, details, price, MRV, EXP } = ProductItem[0]
-    console.log(id);
+    // console.log(id);
     // console.log(id,img,category,title,details,price,MRV,EXP);
 
     let navigate = useNavigate();
-    const navigateToCart=()=>{
-        navigate('CartPage')
+    const c={id,img,category,title,details,price,MRV,EXP}
+
+
+    const AddToCart = () => {
+        sessionStorage.setItem(`item= ${id}`,JSON.stringify(c));
     }
 
     return (
         <>
             <section className='product_details'>
                 <div className="container pt-5">
-                <div className="row m-auto mb-5">
-                <KeyboardArrowLeftIcon style={{fontSize:"5rem"}} onClick={()=>{  navigate(-1)}} />
-                </div>
+                    <div className="row m-auto mb-5">
+                        <KeyboardArrowLeftIcon style={{ fontSize: "5rem" }} onClick={() => { navigate(-1) }} />
+                    </div>
                     <div className="row">
                         <div className="col-xl-5 col-lg-5 col-md-5 col-sm-10 col-10 m-auto ">
                             <img src={img} className="img-fluid rounded-start" alt="..." />
@@ -118,14 +121,16 @@ function ProductDetails() {
 
                     <div className='row m-auto py-5'>
                         <div className="d-flex justify-content-center col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 m-auto ">
-                            <button className='buy_now' onClick={()=>{navigate('buy_now')}}>Buy Now</button>
-                            <button className='add_to_cart' onClick={navigateToCart}>Add to cart</button>
+                            <button className='buy_now' onClick={() => { navigate('buy_now') }}>Buy Now</button>
+                            <button className='add_to_cart' onClick={AddToCart}>Add to cart</button>
                         </div>
                     </div>
                 </div>
+               
+                
             </section>
         </>
     )
 }
 
-export default ProductDetails
+export default ProductDetails;

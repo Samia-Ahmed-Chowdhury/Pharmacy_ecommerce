@@ -14,7 +14,7 @@ function Navbar() {
             <section id="navbar">
                 <div className="container">
                     <div className='row'>
-                        <div class="col-lg-10 col-md-11 col-sm-12 col-12 p-4 me-0 ">
+                        <div className="col-lg-10 col-md-11 col-sm-12 col-12 p-4 me-0 ">
                             <span className='contact' ><PhoneIcon /> +44 0161 408 0044 </span>
                             <span className='contact'><PhoneIcon /> +44 0161 408 0044 </span>
                         </div>
@@ -32,8 +32,10 @@ function Navbar() {
                                     <SearchIcon className="icons" />
                                 </li>
                                 <li className="nav-item">
+                                <NavLink to="/CartPage">
                                     <ShoppingCartIcon className="icons cart" />
-                                    <span class="cart_count">0</span>
+                                    </NavLink>
+                                    <span className="cart_count">0</span>
                                 </li>
                                 <li className="nav-item">
                                     <AccountCircleIcon className="icons" />

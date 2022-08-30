@@ -29,7 +29,7 @@ function App() {
           <Route exact path="/ProductDetails/buy_now" element={<h1> Thanks for Buying From Us</h1>}></Route>
         </Routes>
         <Routes>
-          <Route exact path="/CartPage" element={<CartPage />}></Route>
+       <Route exact path="/CartPage" element={<CartPage />}></Route>
         </Routes>
       </BrowserRouter> 
     </>

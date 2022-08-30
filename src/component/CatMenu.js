@@ -12,8 +12,8 @@ const allCatMenu = ["All", ...new Set(Sdata.map((curElem) => {
 function CatMenu() {
   const [items, setItems] = useState(Sdata);
   // const [catItems, setCatItems] = useState(allCatMenu)
-const catItems =allCatMenu;
-  const filterMenu = (categoryItem) => {
+  const catItems = allCatMenu;
+  const filterMenu = (categoryItem, index) => {
     if (categoryItem === "All") {
       return setItems(Sdata);
     }
@@ -27,13 +27,13 @@ const catItems =allCatMenu;
   return (
     <>
       <section className='category'>
-      <div className='container'>
-        {
-          catItems.map((curElem) => {
-            return <button onClick={() => filterMenu(curElem)}>{curElem}</button>
-          })
-        }
-        {/* <button onClick={() => setItems(Sdata)} >All</button>
+        <div className='container'>
+          {
+            catItems.map((curElem, index) => {
+              return <button onClick={() => filterMenu(curElem, index)} key={index}>{curElem}</button>
+            })
+          }
+          {/* <button onClick={() => setItems(Sdata)} >All</button>
         <button onClick={() => filterMenu('Tablets')}>Tablets</button>
         <button onClick={() => filterMenu('Drops')}>Drops</button>
         <button onClick={() => filterMenu('Liquids')}>Liquids</button>
