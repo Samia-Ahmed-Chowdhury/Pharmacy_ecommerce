@@ -8,15 +8,15 @@ function Footer() {
             <div className="container px-4 py-5 ">
             <div className=" row  py-5 ">
                 <div className=" col-xl-3 col-lg-3 col-md-6 col-sm-10 col- pb-5  m-auto ">
-                    <img src="images/logo.png" className=" img-fluid " alt="..." />
+                    <img src="images/logo.png" className=" img-fluid " alt="logo" />
                     <p>There are many variations of lorem of Lorem Ipsum available.</p>
                     <div className="row d-flex flex-row justify-content-center">
                         <div className=" social  text-center col-lg-5 col-md-5 col-sm-10 col-10  mb-2 d-flex flex-row justify-content-center"
                             style={{color: "white"}}>
-                            <img className="social-icon p-3" src="../images/fb.svg" />
-                            <img className="social-icon p-3" src="../images/twitter.svg" />
-                            <img className="social-icon p-3" src="../images/youtube.svg" />
-                            <img className="social-icon p-3" src="../images/insta.svg" />
+                            <img className="social-icon p-3" src="../images/fb.svg" alt="icon"  />
+                            <img className="social-icon p-3" src="../images/twitter.svg" alt="icon" />
+                            <img className="social-icon p-3" src="../images/youtube.svg" alt="icon" />
+                            <img className="social-icon p-3" src="../images/insta.svg" alt="icon" />
                         </div>
                     </div>
                 </div>

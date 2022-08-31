@@ -13,7 +13,7 @@ function Testimonial(props) {
             <h4>{props.h4_data}</h4>
 
             <div className="details_img col-xl-1 col-lg-1 col-md-2 col-sm-2 col-2 m-auto">
-              <img src={props.img_src} className="img-fluid" />
+              <img src={props.img_src} className="img-fluid" alt="img" />
             </div>
             <h5>{props.h5_data} <KeyboardArrowRightIcon className='arrow' /></h5>
           </div>

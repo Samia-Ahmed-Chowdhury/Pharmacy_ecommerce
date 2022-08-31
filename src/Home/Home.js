@@ -1,4 +1,3 @@
-import { ThunderstormOutlined } from '@mui/icons-material';
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import CatMenu from '../component/CatMenu';

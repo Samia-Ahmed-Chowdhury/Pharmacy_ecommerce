@@ -13,7 +13,7 @@ function Cta(props) {
                             <button className="hero-btn" onClick={props.navigationTo}>{props.btn}</button>
                         </div>
                         <div className="col-xl-5 col-lg-5 col-md-5 col-sm-10 col-10 m-auto ">
-                            <img src={props.img_src} className="img-fluid hero_img" />
+                            <img src={props.img_src} alt="img" className="img-fluid hero_img" />
                         </div>
 
                     </div>

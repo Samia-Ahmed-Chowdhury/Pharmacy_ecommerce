@@ -26,7 +26,7 @@ function CatCard(props) {
         <div className= {`${props.id} medicine_card card mb-3`} onClick={() => showDetails(props.id)}>
           <div className="row g-0">
             <div className="col-md-4">
-              <img src={props.img} className="img-fluid rounded-start" alt="..." />
+              <img src={props.img} className="img-fluid rounded-start" alt="img" />
             </div>
             <div className="col-md-8">
               <div className="card-body">

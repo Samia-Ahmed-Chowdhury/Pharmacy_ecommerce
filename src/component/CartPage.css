@@ -1,11 +1,108 @@
-.cart_page .arrow_text{
+.cart_page .arrow_text {
     font-size: 20px;
     align-items: center;
     display: flex;
 }
-.cart_page h1{   
-     text-align: center;
-    font-size: 28px;
+
+.cart_page h1 {
+    text-align: center;
+    font-size: 2.8rem;
     font-weight: 700;
     color: #666666;
+}
+
+.cart_row {
+    display: flex;
+    align-items: center;
+}
+
+.cart_row h2 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
+
+.cart_row p {
+    font-size: 18px;
+    color: #494747;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cart_row h5 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.cart_row .del {
+    font-size: 2.9rem;
+    color: #cf0000;
+}
+
+.cart_row .add {
+    padding: 0 2rem;
+    border: none;
+    border-radius: 1.5rem;
+    background: #FFD2AA;
+    color: black;
+    margin-left: 2rem;
+}
+
+.cart_row .subtract {
+    padding: 0 2rem;
+    border: none;
+    border-radius: 1.5rem;
+    background: #F1CBFF;
+    color: black;
+    margin-right: 2rem;
+}
+
+.cart_row button svg {
+    color: black;
+    font-size: 2rem !important;
+    font-weight: 900 !important;
+}
+
+.cart_part hr {
+    margin: 2rem auto;
+    overflow-y: scroll;
+}
+
+.cart_part {
+    width: 100%;
+    height: 50rem;
+    background: linear-gradient(103.49deg, #ffffff -28.13%, rgba(242, 247, 255, 0.5) 116.84%);
+    box-shadow: rgba(0, 0, 0, 0.08) 0rem 0.4rem 1.2rem;
+    border-radius: 2rem;
+    margin: 20px 0;
+    display: grid;
+    place-items: center;
+}
+.cart_page h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+.cart_page h3 span{
+    color: red;
+}
+.cart_page .clear{
+    font-size: 16px;
+    background: #FFD2AA;
+    font-weight: 600;
+    margin: 13px 20px 0 0;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 10px;
+}
+.cart_page .check_out{
+    font-size: 16px;
+    background: #F1CBFF;
+    font-weight: 600;
+    margin: 13px 0 0 ;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 10px;
 }
