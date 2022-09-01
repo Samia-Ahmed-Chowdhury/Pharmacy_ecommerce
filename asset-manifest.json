@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Pharmacy_ecommerce/static/css/main.8a9aa6bf.css",
+    "main.js": "/Pharmacy_ecommerce/static/js/main.5eefcbd9.js",
+    "index.html": "/Pharmacy_ecommerce/index.html",
+    "main.8a9aa6bf.css.map": "/Pharmacy_ecommerce/static/css/main.8a9aa6bf.css.map",
+    "main.5eefcbd9.js.map": "/Pharmacy_ecommerce/static/js/main.5eefcbd9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a9aa6bf.css",
+    "static/js/main.5eefcbd9.js"
+  ]
+}
