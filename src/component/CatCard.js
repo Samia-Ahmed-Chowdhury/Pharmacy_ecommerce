@@ -33,7 +33,7 @@ function CatCard(props) {
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">{props.details}
                   <small className="text-muted"> load more</small></p>
-                <h5 style={{ color: "red" }}>{props.price}</h5>
+                <h5 style={{ color: "red" }}> ${props.price}</h5>
               </div>
             </div>
           </div>

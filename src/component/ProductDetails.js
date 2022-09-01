@@ -80,7 +80,7 @@ function ProductDetails() {
                                     <h4>Price</h4>
                                 </div>
                                 <div className=" col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 m-auto ">
-                                    <h3><ArrowRightIcon className="arrow_icon" />{price}</h3>
+                                    <h3><ArrowRightIcon className="arrow_icon" /> ${price}</h3>
                                 </div>
                             </div>
                         </div>

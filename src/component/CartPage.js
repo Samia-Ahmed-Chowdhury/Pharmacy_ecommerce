@@ -8,8 +8,9 @@ import CartCard from './CartCard';
 function CartPage() {
 
   let navigate = useNavigate();
-  
+
   const arr = []
+  
   let keys = Object.keys(sessionStorage);
   for (let key of keys) {
     let data = sessionStorage.getItem(key)
@@ -17,8 +18,12 @@ function CartPage() {
     // console.log(data)
     arr.push(data)
   }
-  console.log(arr)
-
+  
+console.log(arr)
+  const clearCart = () => {
+    alert('Are sure to clear cart list !!!!!');
+    sessionStorage.clear();
+  }
   return (
     <>
       <section className='cart_page'>
@@ -55,7 +60,7 @@ function CartPage() {
               <h3>
                 card total:  <span> $55</span>
               </h3>
-              <button className='clear'>Clear Cart</button>
+              <button className='clear' onClick={clearCart}>Clear Cart</button>
               <button className='check_out'>CheckOut</button>
             </div>
           </div>

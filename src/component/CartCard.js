@@ -19,6 +19,10 @@ function CartCard(props) {
     const [count, dispatch] = useReducer(reducer, initialState);
     const { price } = props;
 
+    const clearItem=(id)=>{
+
+    }
+
     return (
         <>
             <div className='cart_row row m-auto '>
@@ -32,18 +36,15 @@ function CartCard(props) {
                 <div className="d-flex justify-content-center col-xl-2 col-lg-2 col-md-2 col-sm-10 col-7 m-auto ">
                     <div className='d-flex' style={{ borderRadius: "20px", border: '2px solid beige' }}>
                         <button className='subtract' onClick={() => { dispatch({ type: 'subtract', value: 1 }) }}><RemoveIcon /></button>
-                        <h2>{count >= 0 ? count : 1}</h2>
+                        <h2>{count > 0 ? count : 1}</h2>
                         <button className='add' onClick={() => { dispatch({ type: 'add', value: 1 }) }}><AddIcon /></button>
                     </div>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-2 col-sm-10 col-10 g-5 ">
-     {
-        console.log(price)
-     }
-                    <h5>{price * count}</h5>
+                    <h5>{count > 0 ? price * count : price }</h5>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-2 col-sm-10 col-10 g-5 d-flex justify-content-center">
-                    <DeleteIcon className='del' />
+                    <DeleteIcon className='del' onClick={()=>clearItem(props.id)}/>
                 </div>
             </div>
             <hr />
