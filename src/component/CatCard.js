@@ -11,7 +11,7 @@ function CatCard(props) {
     });
     // console.log(updateItems)
 
-    navigate('ProductDetails',
+    navigate('/ProductDetails',
       {
         state: {
           //  id:1

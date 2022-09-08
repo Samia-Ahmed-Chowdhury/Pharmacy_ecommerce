@@ -1,8 +1,9 @@
 
-footer .footer_box{
+footer {
     margin-top: 90px;
     background: #FFFBF7;
 border-radius: 120px 120px  0px 0px;
+
 }
 footer p {
     margin: 24px 0;
@@ -18,7 +19,7 @@ footer .social {
 }
 
 footer h6 {
-    color: #fff;
+    color: black;
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;

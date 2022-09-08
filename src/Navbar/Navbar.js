@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import "../Navbar/Navbar.css"
 import logo from "../images/logo.png"
 import { NavLink } from 'react-router-dom'
@@ -6,9 +6,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PhoneIcon from '@mui/icons-material/Phone';
+import {CounterContex} from '../App'
 
-
-function Navbar() {
+function Navbar() {    
+    const Counter = useContext(CounterContex)
     return (
         <>
             <section id="navbar">
@@ -35,7 +36,11 @@ function Navbar() {
                                 <NavLink to="/CartPage">
                                     <ShoppingCartIcon className="icons cart" />
                                     </NavLink>
-                                    <span className="cart_count">0</span>
+                                    <span className="cart_count">
+                                    <p style={{margiTop:"2.5px"}}>
+                                    {Counter.counterCount>0 ? Counter.counterCount:0}
+                                    </p>
+                                    </span>
                                 </li>
                                 <li className="nav-item">
                                     <AccountCircleIcon className="icons" />
@@ -45,6 +50,7 @@ function Navbar() {
                     </div>
                 </nav>
             </section>
+         
         </>
     )
 }

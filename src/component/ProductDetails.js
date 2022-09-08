@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import "./ProductDetails.css"
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import {CounterContex} from '../App'
+
 function ProductDetails() {
+    const Counter = useContext(CounterContex)
 
     const params = useLocation();
     const ProductItem = params.state.updateItems
@@ -21,20 +22,21 @@ function ProductDetails() {
 
     const AddToCart = () => {
         sessionStorage.setItem(`item= ${id}`,JSON.stringify(c));
+        Counter.counterDispatch('increment');
     }
 
     return (
         <>
             <section className='product_details'>
-                <div className="container pt-5">
-                    <div className="row m-auto mb-5">
+                <div className="container-fluid pt-1">
+                    <div className="row m-auto mb-2">
                         <KeyboardArrowLeftIcon style={{ fontSize: "5rem" }} onClick={() => { navigate(-1) }} />
                     </div>
                     <div className="row">
-                        <div className="col-xl-5 col-lg-5 col-md-5 col-sm-10 col-10 m-auto ">
+                        <div className="col-xl-4 col-lg-4 col-md-5 col-sm-10 col-10 m-auto ">
                             <img src={img} className="img-fluid rounded-start" alt="..." />
                         </div>
-                        <div className="col-xl-7 col-lg-7 col-md-7 col-sm-10 col-10 m-auto ">
+                        <div className="col-xl-8 col-lg-8 col-md-7 col-sm-10 col-10 m-auto ">
                             <div className="row my-4">
                                 <div className="d-flex  align-items-center col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 m-auto ">
                                     <h4>Product Type</h4>
@@ -88,7 +90,7 @@ function ProductDetails() {
 
                     <div className='row m-auto py-5'>
                         <div className="d-flex justify-content-center col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 m-auto ">
-                            <button className='buy_now' onClick={() => { navigate('buy_now') }}>Buy Now</button>
+                            <button className='buy_now' onClick={() => { navigate('/buy_now') }}>Buy Now</button>
                             <button className='add_to_cart' onClick={AddToCart}>Add to cart</button>
                         </div>
                     </div>

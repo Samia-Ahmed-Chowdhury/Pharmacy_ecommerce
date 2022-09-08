@@ -44,7 +44,7 @@ function CatMenu() {
         <button onClick={() => filterMenu('Suppositories')}>Suppositories  </button> */}
         </div>
       </section>
-      <div className="container-fulid my-5">
+      <div className="container-fluid my-5">
         <div className="row">
           <div className="col-10 mx-auto">
             <div className="row">

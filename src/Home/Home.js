@@ -10,10 +10,10 @@ import "../Home/Home.css"
 function Home() {
     let navigate = useNavigate();
     const navigationTo = () => {
-        navigate('Precibecision');
+        navigate('/prescription');
     }
     const navigationToCta = () => {
-        navigate('Cta');
+        navigate('/Cta');
     }
     return (
         <>
@@ -38,6 +38,7 @@ function Home() {
                     btn={C[1].btn}
                     img_src={C[1].img_src}
                     bg_svg={C[1].bg_svg}
+                    row_div={C[1].row_div}
                     navigationTo={navigationToCta}
                 />
             </div>
@@ -81,7 +82,7 @@ const C = [
     {
         h1_title: "Life-saving medicines are delivered on time",
         p_title: "If you are like most people, you need to take medicine at some point in your life. You may need to take medicine every day, or you may only need to take medicine once in a while. Either way, you want to make sure that your medicines are safe, and that they will help you get better.. Then You have came right place.",
-        btn: "Drop your Precibecision",
+        btn: "Drop your Prescription",
         img_src: "../images/hero_img.png",
         bg_svg: "show_svg"
     },
@@ -90,7 +91,8 @@ const C = [
         p_title: "You may need to take medicine every day, or you may only need to take medicine once in a while. Either way, you want to make sure that your medicines are safe, and that they will help you get bette",
         btn: "Consult With Doctor",
         img_src: "../images/cta_img.png",
-        bg_svg: "hide_svg"
+        bg_svg: "hide_svg",
+        row_div:"flex-column-reverse flex-lg-row"
     }
 ]
 

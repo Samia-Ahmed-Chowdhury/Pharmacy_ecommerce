@@ -6,7 +6,7 @@ function Cta(props) {
     <>
       <section id={props.section_id}>
                 <div className="container py-5 ">
-                    <div className="row ">
+                    <div className={ `row ${props.row_div}`} >
                         <div className="col-xl-7 col-lg-7 col-md-7 col-sm-10 col-10  m-auto ">
                             <h1>{props.h1_title}</h1>
                             <p>{props.p_title}</p>
