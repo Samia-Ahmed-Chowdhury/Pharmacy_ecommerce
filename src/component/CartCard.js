@@ -1,13 +1,12 @@
-import React, { useReducer,useContext } from 'react'
+import React, { useReducer, useContext, useState, useEffect } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
-import {CounterContex} from '../App'
-
-
+import { CounterContex } from '../App'
 
 function CartCard(props) {
-    const { price} = props;
+    const { price } = props;
+
 
     const reducer = (state, action) => {
         switch (action) {
@@ -24,19 +23,20 @@ function CartCard(props) {
     const [count, dispatch] = useReducer(reducer, initialState);
 
     const Counter = useContext(CounterContex)
-   
-    const AddCartHandler=()=>{
+
+    const AddCartHandler = (getV) => {
         dispatch('add');
         Counter.counterDispatch('increment');
+      
     }
 
-    const SubCartHandler=()=>{
+
+
+    const SubCartHandler = () => {
         dispatch('subtract')
         Counter.counterDispatch('decrement');
     }
 
-
-   
     return (
         <>
             <div className='cart_row row m-auto '>
@@ -51,21 +51,20 @@ function CartCard(props) {
                     <div className='d-flex' style={{ borderRadius: "20px", border: '2px solid beige' }}>
                         <button className='subtract' onClick={SubCartHandler}><RemoveIcon /></button>
                         <h2>{count > 0 ? count : 1}</h2>
-                        <button className='add' onClick={()=>AddCartHandler()}><AddIcon /></button>
+                        <button className='add' onClick={() => AddCartHandler(price)}><AddIcon /></button>
                     </div>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 g-5 ">
-                    <h5>{count > 0 ? price * count : price }</h5>
-                  
+                    <h5>{count > 0 ? price * count : price}</h5>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-2 col-sm-1 col-2 g-5 d-flex justify-content-center">
-                    <DeleteIcon className='del' onClick={()=>props.clearItem(props.id)}/>
+                    <DeleteIcon className='del' onClick={() => props.clearItem(props.id)} />
                 </div>
             </div>
             <hr />
-
         </>
     )
+
 }
 
 export default CartCard

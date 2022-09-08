@@ -1,10 +1,10 @@
-import React, { useEffect, useState,useContext } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import "./CartPage.css"
 import { useNavigate } from 'react-router-dom';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { Scrollbars } from "react-custom-scrollbars-2";
 import CartCard from './CartCard';
-import {CounterContex} from '../App'
+import { CounterContex } from '../App'
 
 function CartPage() {
 
@@ -19,7 +19,7 @@ function CartPage() {
     // console.log(data)
     arr.push(data)
   }
-  console.log(arr)
+  // console.log(arr)
 
   const clearCart = () => {
     alert('Are sure to clear cart list !!!!!');
@@ -35,11 +35,14 @@ function CartPage() {
 
   }
 
+
   useEffect(() => {
-    console.log(`arr `)
+    // console.log(`arr `)
     setRen(false);
   }, [ren])
-const t=[]
+
+  const t = []
+
   return (
     <>
       <section className='cart_page'>
@@ -54,20 +57,20 @@ const t=[]
           </div>
           <div className='cart_part'>
             <Scrollbars className="cart-items-container">
-              {arr.map((val, index) => { 
+              {arr.map((val, index) => {
+                t.push(parseInt((val.price)))
                 return (
                   <CartCard
                     key={index}
                     id={val.id}
                     img={val.img}
                     title={val.title}
-                    price={val.price} 
+                    price={val.price}
                     EXP={val.EXP}
                     clearItem={clearItem}
-                    
-                    
+
                   />
-                ); 
+                );
               })}
 
             </Scrollbars>
@@ -77,8 +80,7 @@ const t=[]
           <div className='row m-auto d-flex justify-content-end'>
             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 g-5 ">
               <h3>
-                card total:  <span> $55</span>
-             
+                card total:  <span> ${t.reduce((a, b) => a + b)}</span>
               </h3>
               <button className='clear' onClick={clearCart}>Clear Cart</button>
               <button className='check_out'>CheckOut</button>
