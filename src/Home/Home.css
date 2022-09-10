@@ -55,17 +55,22 @@ html {
 /* media query */
 @media only screen and (max-width:1400px) {
     #hero h1 {
-        font-size: 5.5rem;
+        font-size: 5.0rem;
+        line-height: 5.4rem;
+    }
+    #hero p {
+        font-size: 1.4rem;
     }
 }
 @media only screen and (max-width:1200px) {
     #hero h1 {
-        font-size: 4rem;
-        line-height: 5rem;
+        font-size: 3.5rem;
+        line-height: 4.9rem;
     }
     #hero p{
-        font-size: 1.4rem; 
+        font-size: 1.2rem; 
         margin: 0 0 1.3rem 0;
+        line-height: 2rem;
     }
 }
 
@@ -128,7 +133,7 @@ html {
 /* service */
 
 #service h3{
-    font-size: 37px;
+    font-size: 3.7rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 50px;
@@ -151,7 +156,7 @@ box-shadow: 5px 14px 50px rgb(0 0 0 / 10%) !important;
 }
 #service .card-title {
     padding-top: 12px;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #776C6C;
     background: none;
@@ -160,23 +165,33 @@ box-shadow: 5px 14px 50px rgb(0 0 0 / 10%) !important;
 
 #service .card-text {
     padding-bottom: 8px;
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-top: 12px;
 
 }
 
 
-
+/* media query */
+@media only screen and (max-width:1400px) {
+    html {
+        font-size: 60% !important;
+    }
+}
+@media only screen and (max-width:1200px) {
+    html {
+        font-size: 58% !important;
+    }
+}
 
 
 @media only screen and (max-width:998px) {
     html {
-        font-size: 55%;
+        font-size: 55% !important;
     }
 }
 
 @media only screen and (max-width:768px) {
     html {
-        font-size: 45%;
+        font-size: 45% !important;
     }
 }   

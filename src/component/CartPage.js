@@ -5,7 +5,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { Scrollbars } from "react-custom-scrollbars-2";
 import CartCard from './CartCard';
 import { CounterContex } from '../App'
-
+var all = [0];
 function CartPage() {
 
   let navigate = useNavigate();
@@ -24,6 +24,8 @@ function CartPage() {
   const clearCart = () => {
     alert('Are sure to clear cart list !!!!!');
     sessionStorage.clear();
+    navigate('/')
+
   }
 
   const Counter = useContext(CounterContex)
@@ -41,7 +43,23 @@ function CartPage() {
     setRen(false);
   }, [ren])
 
+  const getV = ''
   const t = []
+
+  const [state, setState] = useState(false)
+  const v = (getV, getState) => {
+    getV = parseInt(getV)
+    all.push(getV);
+    setState(getState)
+  }
+  const vv = (getV, getState) => {
+    getV = parseInt(getV)
+    all.push(-getV);
+    setState(getState)
+  }
+
+  console.log(all)
+  const cc = all.reduce((a, b) => a + b)
 
   return (
     <>
@@ -59,6 +77,7 @@ function CartPage() {
             <Scrollbars className="cart-items-container">
               {arr.map((val, index) => {
                 t.push(parseInt((val.price)))
+
                 return (
                   <CartCard
                     key={index}
@@ -68,7 +87,8 @@ function CartPage() {
                     price={val.price}
                     EXP={val.EXP}
                     clearItem={clearItem}
-
+                    v={v}
+                    vv={vv}
                   />
                 );
               })}
@@ -80,10 +100,14 @@ function CartPage() {
           <div className='row m-auto d-flex justify-content-end'>
             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-10 col-10 g-5 ">
               <h3>
-                card total:  <span> ${t.reduce((a, b) => a + b)}</span>
+                card total:  <span> ${state ? 
+                (t.reduce((a, b) => a + b) + cc > t.reduce((a, b) => a + b)) ? t.reduce((a, b) => a + b) + cc : t.reduce((a, b) => a + b) 
+                : (t.reduce((a, b) => a + b,0)) < 0 ? 0: (t.reduce((a, b) => a + b,0))
+                
+                }</span>
               </h3>
               <button className='clear' onClick={clearCart}>Clear Cart</button>
-              <button className='check_out'>CheckOut</button>
+              <button className='check_out' onClick={() => { navigate('/checkout') }}>CheckOut</button>
             </div>
           </div>
 
@@ -96,3 +120,4 @@ function CartPage() {
 }
 
 export default CartPage
+

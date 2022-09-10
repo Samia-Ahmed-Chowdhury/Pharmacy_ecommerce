@@ -1,6 +1,22 @@
+:root {
+    --main-color: #F1CBFF;
+    --main-secondary-color: #FFD2AA;
+    --main-heading-font: 'Poppins', sans-serif;
+    --main-regular-font: 'Inter', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
 h2{
     text-align: center;
-    font-size: 32px;
+    font-size:3.2rem;
     font-weight: 800;
     color: #3f454bdb;
     padding:1rem 0;
@@ -15,7 +31,7 @@ h2{
 .details_box h3 {
     font-family: var(--main-heading-font);
     text-align: center;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     color: #41464bbd;
     background: none;
@@ -23,7 +39,7 @@ h2{
 
  .details_box p {
     font-family: var(--main-regular-font);
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-top: 12px;
     margin-bottom: 19px;
     text-align: center;
@@ -32,7 +48,7 @@ h2{
  .details_box h4 {
     font-family: var(--main-regular-font);
     text-align: center;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
@@ -44,10 +60,34 @@ h2{
  .details_box h5 {
     font-family: var(--main-regular-font);
     text-align: center;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #6e6eb0;
 }
 .arrow {
     font-size: 30px !important;
     color: var(--main-color) !important;
 }
+/* media query */
+@media only screen and (max-width:1400px) {
+    html {
+        font-size: 60% !important;
+    }
+}
+@media only screen and (max-width:1200px) {
+    html {
+        font-size: 58% !important;
+    }
+}
+
+
+@media only screen and (max-width:998px) {
+    html {
+        font-size: 55% !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 45% !important;
+    }
+}   

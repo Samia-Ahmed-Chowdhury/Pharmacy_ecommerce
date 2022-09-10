@@ -1,4 +1,4 @@
-import React, { useReducer, useContext, useState, useEffect } from 'react'
+import React, { useReducer, useContext} from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -27,14 +27,15 @@ function CartCard(props) {
     const AddCartHandler = (getV) => {
         dispatch('add');
         Counter.counterDispatch('increment');
-      
+      props.v(getV,true)
     }
 
 
 
-    const SubCartHandler = () => {
+    const SubCartHandler = (getV) => {
         dispatch('subtract')
         Counter.counterDispatch('decrement');
+        props.vv(getV,true)
     }
 
     return (
@@ -49,7 +50,7 @@ function CartCard(props) {
                 </div>
                 <div className="d-flex justify-content-center col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 m-auto ">
                     <div className='d-flex' style={{ borderRadius: "20px", border: '2px solid beige' }}>
-                        <button className='subtract' onClick={SubCartHandler}><RemoveIcon /></button>
+                        <button className='subtract' onClick={()=>SubCartHandler(price)}><RemoveIcon /></button>
                         <h2>{count > 0 ? count : 1}</h2>
                         <button className='add' onClick={() => AddCartHandler(price)}><AddIcon /></button>
                     </div>

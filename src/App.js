@@ -49,6 +49,9 @@ function App() {
         <Routes>
        <Route exact path="/CartPage" element={<CartPage />}></Route>
         </Routes>
+        <Routes>
+          <Route exact path="/checkout" element={<img src="../images/buy.jpg" className="img-fluid " alt="prb" />}></Route>
+        </Routes>
       </BrowserRouter> 
       </CounterContex.Provider>
     </>

@@ -1,3 +1,19 @@
+:root {
+    --main-color: #F1CBFF;
+    --main-secondary-color: #FFD2AA;
+    --main-heading-font: 'Poppins', sans-serif;
+    --main-regular-font: 'Inter', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
 
 footer {
     margin-top: 90px;
@@ -9,7 +25,7 @@ footer p {
     margin: 24px 0;
     column-gap: 0;
     color: #41464bbd;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 28px;
 }
@@ -20,7 +36,7 @@ footer .social {
 
 footer h6 {
     color: black;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 30px;
 }
@@ -32,7 +48,7 @@ footer form input {
     border: 0;
     border-radius: 4px;
     background-color: #fff;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 28px;
     color: #5a626d;
     font-weight: 400;
@@ -67,3 +83,27 @@ footer form .submit_btn {
         padding-right: 7rem !important;
     }
 }
+/* media query */
+@media only screen and (max-width:1400px) {
+    html {
+        font-size: 60% !important;
+    }
+}
+@media only screen and (max-width:1200px) {
+    html {
+        font-size: 58% !important;
+    }
+}
+
+
+@media only screen and (max-width:998px) {
+    html {
+        font-size: 55% !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 45% !important;
+    }
+}   

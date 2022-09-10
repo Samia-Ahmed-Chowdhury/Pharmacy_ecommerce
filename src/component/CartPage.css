@@ -100,7 +100,7 @@ html {
     color: red;
 }
 .cart_page .clear{
-    font-size: 16px;
+    font-size: 1.6rem;
     background: #FFD2AA;
     font-weight: 600;
     margin: 13px 20px 0 0;
@@ -146,3 +146,31 @@ align-items: flex-start;
 justify-content: flex-start;
 }
 }
+
+
+
+
+/* media query */
+@media only screen and (max-width:1400px) {
+    html {
+        font-size: 60% !important;
+    }
+}
+@media only screen and (max-width:1200px) {
+    html {
+        font-size: 58% !important;
+    }
+}
+
+
+@media only screen and (max-width:998px) {
+    html {
+        font-size: 55% !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 45% !important;
+    }
+}   
